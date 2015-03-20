@@ -94,3 +94,13 @@ h1 small {
 audio {
   max-width: 100%;
 }
+
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  #logo {
+    width: 60px;
+  }
+}

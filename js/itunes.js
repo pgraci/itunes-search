@@ -23,6 +23,8 @@ $(document).ready(function() {
 
       var default_url_api = "https://itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=50/json?callback-?";
 
+      resetanddestroy();
+
       $.getJSON(default_url_api, function(data){
           $.each(data.feed.entry, function(i, field){
 
@@ -52,21 +54,26 @@ $(document).ready(function() {
       resetanddestroy();
 
       $.getJSON(apiurl + usersearch, function(data){
-          $.each(data.results, function(i, field){
 
-            search_artwork = field.artworkUrl100.replace('.100x100-75','.600x600-75');
-            search_preview_url = field.previewUrl;
-            search_artist = field.artistName;
-            search_track_name = field.trackName;
-            search_album = field.collectionName;
-            search_buy_url = field.trackViewUrl;
+          if (data.results.length === 0) {
+                $('#music-container').append('<li>No matches for ' + usersearch + '. Try another search.</li>');
+          } else {
+               $.each(data.results, function(i, field){
 
-            if (search_artwork) {
-              createplayers(i);
-              buildtracks(i,search_artwork,search_artist,search_track_name,search_album,search_buy_url,playerinfo);
-              buildthisplayer(i,search_preview_url);
-            }
-          });
+                 search_artwork = field.artworkUrl100.replace('.100x100-75','.600x600-75');
+                 search_preview_url = field.previewUrl;
+                 search_artist = field.artistName;
+                 search_track_name = field.trackName;
+                 search_album = field.collectionName;
+                 search_buy_url = field.trackViewUrl;
+
+                 if (search_artwork) {
+                   createplayers(i);
+                   buildtracks(i,search_artwork,search_artist,search_track_name,search_album,search_buy_url,playerinfo);
+                   buildthisplayer(i,search_preview_url);
+                 }
+               });
+          }
 
           animateandhover();
 
