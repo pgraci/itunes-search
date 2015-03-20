@@ -1,0 +1,96 @@
+h1 {
+  font-size: 3.0em;
+  line-height: 1.0em;
+  font-weight: 200;
+  padding: 4px 0 0 20px;
+  display: block;
+}
+
+h1 small {
+  font-weight: 200;
+  display: block;
+  font-size: .4em;
+}
+
+#logo {
+  float: left;
+  width: 70px;
+  margin-right: 10px;
+}
+
+.input-group {
+  margin: 20px 0 20px 0;
+}
+
+#music-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.songs {
+  float: left;
+  padding: 5px 5px 10px 5px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+}
+
+.music-img {
+  position:relative;
+  padding-top:100%;
+  overflow: hidden;
+  background-color: #e7e7e7;
+}
+.music-img img {
+  position:absolute;
+  top:0;
+  left:0;
+  max-width: 100%;
+}
+.music-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 200;
+}
+.music-meta {
+  font-weight: 200;
+  font-size: .75em;
+  margin: 10%;
+  width: 80%;
+  padding: 5%;
+  color: #000;
+  background-color: rgba(255,255,255,.90);
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0px;
+  display: none;
+  text-align: center;
+}
+.music-title a {
+  color: #000;
+  text-decoration: none;
+}
+.music-title a:hover {
+  color: #c0c0c0;
+}
+.music-artist {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  padding: 10px;
+  text-align: right;
+}
+.footer, .push {
+    height: 40px; /* .push must be the same height as .footer */
+}
+
+audio {
+  max-width: 100%;
+}

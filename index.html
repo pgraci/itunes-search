@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iTunes Search</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+  <link type="text/css" href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/circle.skin/circle.player.css">
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.transform2d.js"></script>
+  <script type="text/javascript" src="js/jquery.grab.js"></script>
+  <script type="text/javascript" src="js/jquery.jplayer.js"></script>
+  <script type="text/javascript" src="js/mod.csstransforms.min.js"></script>
+  <script type="text/javascript" src="js/circle.player.js"></script>
+  <script type="text/javascript" src="js/itunes.js"></script>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <img src="images/itunes.png" alt="iTunes" id="logo" />
+
+        <h1>iTunes Search <small>jQuery + jPlayer + Bootstrap demo</small></h1>
+
+      </div>
+      <div class="span12">
+
+        <div class="input-group">
+           <input type="text" class="form-control" name="search-word" id="search-word" placeholder="Enter your favorite artist or song!">
+           <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Search</button>
+           </span>
+        </div>
+
+
+        <ul id="music-container"></ul>
+
+      </div>
+    </div>
+    <div class="push"></div>
+  </div>
+  <footer class="footer">
+   <p>http://philgraci.com</p>
+  </footer>
+
+</body>
+</html>
