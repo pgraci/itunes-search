@@ -9,4 +9,4 @@ Results are faded in using jQueryUI delay and fadeTo methods.
 
 Songs can be previewed by hovering over album artwork, and clicking the jPlayer Circle Player.
 
-Online demo: http://philgraci.com/itunes-search
+Demo: http://philgraci.com/itunes-search
