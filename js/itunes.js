@@ -28,7 +28,7 @@ $(document).ready(function() {
       $.getJSON(default_url_api, function(data){
           $.each(data.feed.entry, function(i, field){
 
-            search_artwork = field["im:image"][2].label.replace('.170x170-75','.600x600-75');
+            search_artwork = field["im:image"][2].label.replace('170x170','600x600');
             search_preview_url = field.link[1].attributes.href;
             search_artist = field["im:name"].label;
             search_track_name = field["im:artist"].label;
@@ -60,7 +60,9 @@ $(document).ready(function() {
           } else {
                $.each(data.results, function(i, field){
 
-                 search_artwork = field.artworkUrl100.replace('.100x100-75','.600x600-75');
+                   console.log(field.artworkUrl100);
+
+                 search_artwork = field.artworkUrl100.replace('100x100','600x600');
                  search_preview_url = field.previewUrl;
                  search_artist = field.artistName;
                  search_track_name = field.trackName;
